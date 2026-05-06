@@ -30,13 +30,13 @@
 #define Selectable FastLED_Selectable
 #include <FastLED.h>
 #undef Selectable
-#include <Control_Surface.h>  // ** YOU MUST USE modded version of the control-surface library provided by Zach Poff **
+#include <Control_Surface.h>  // ** YOU MUST manually install forked version of the control-surface library **
                               // https://github.com/z-l-p/Control-Surface-with-BLE-mods
                               // (because normal lib can't set BLE manufacturer/model names!)
 #include <WiFiManager.h>      // https://github.com/tzapu/WiFiManager
 #include <Preferences.h>      // ESP32 built-in NVRAM key-value store
 
-// --- Custom BLE DIS strings (for Zach Poff's modified Control_Surface library) ---
+// --- Custom BLE DIS strings (for modified Control_Surface library) ---
 namespace cs::midi_ble_nimble {
 extern void setDISManufacturer(const char *name);
 extern void setDISModel(const char *model);
